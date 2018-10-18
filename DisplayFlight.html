@@ -36,7 +36,7 @@
 
 
     <script>
-        var arr = [{"price": 1000,"Airline":"Singapore","Takeoff":"BKK 06.00","Landing":"CDG 18.00","Stops": 12},
+        var flights = [{"price": 1000,"Airline":"Singapore","Takeoff":"BKK 06.00","Landing":"CDG 18.00","Stops": 12},
                    {"price": 2500,"Airline":"ThaiAirAsia","Takeoff":"BKK 06.00","Landing":"CDG 17.00","Stops": 12},
                    {"price": 3000,"Airline":"KoreanAir","Takeoff":"BKK 06.00","Landing":"CDG 19.00","Stops": 12}];
 
@@ -47,29 +47,29 @@
           var tr = document.createElement("tr");
 
           var p = document.createElement("td");
-          var p1 = document.createTextNode(arr[i].price);
+          var p1 = document.createTextNode(flights[i].price);
           p.appendChild(p1);
           tr.appendChild(p);
           p.style.color = "white";
           p.style.fontSize = "26px";
 
           var a = document.createElement("td");
-          var a1 = document.createTextNode(arr[i].Airline);
+          var a1 = document.createTextNode(flights[i].Airline);
           a.appendChild(a1);
           tr.appendChild(a);
 
           var t = document.createElement("td");
-          var t1 = document.createTextNode(arr[i].Takeoff);
+          var t1 = document.createTextNode(flights[i].Takeoff);
           t.appendChild(t1);
           tr.appendChild(t);
 
           var l = document.createElement("td");
-          var l1 = document.createTextNode(arr[i].Landing);
+          var l1 = document.createTextNode(flights[i].Landing);
           l.appendChild(l1);
           tr.appendChild(l);
 
           var s = document.createElement("td");
-          var s1 = document.createTextNode(arr[i].Stops);
+          var s1 = document.createTextNode(flights[i].Stops);
           s.appendChild(s1);
           tr.appendChild(s);
 
