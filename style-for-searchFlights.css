@@ -1,0 +1,36 @@
+h1{
+  font-size: 70px;
+  font-family: "Consolas";
+  font-weight: bold ;
+}
+label{
+  font-size: 26px;
+  font-family: "Cordia New";
+  font-weight: 550 ;
+}
+#fromeiei, #fromAirport {
+  background-color: lightGray    ;
+}
+button.btn-primary{
+  background-color: LightCoral        ;
+  border: 2px solid LightCoral ;
+  font-size: 22px;
+  font-family: "Cordia New";
+}
+button.btn-primary:hover {
+  /* background-color: LightCoral  ;
+  border: 2px solid LightCoral ; */
+  background-color: LightSalmon   ;
+  border: 2px solid LightSalmon  ;
+  /* opacity: 0.7; */
+}
+body {
+  background-color: LightSkyBlue   ;
+}
+select {
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  background-color: lightGray;
+  border-radius: 4px;
+}

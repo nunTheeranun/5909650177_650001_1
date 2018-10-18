@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Display Flight</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" type = "text/css" href="style-displayFlight-page.css">
+</head>
+<body>
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#List">List View</a></li>
+    <li class="active"><a data-toggle="tab" href="#Matrix">Matrix View</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="Matrix" class="tab-pane fade in active">
+      <table id="Matrix1" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Price</th>
+            <th>Airline</th>
+            <th>Take-off</th>
+            <th>Landing</th>
+            <th>Stops (Duration)</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+
+    <script>
+        var arr = [{"price": 1000,"Airline":"Singapore","Takeoff":"BKK 06.00","Landing":"CDG 18.00","Stops": 12},
+                   {"price": 2500,"Airline":"ThaiAirAsia","Takeoff":"BKK 06.00","Landing":"CDG 17.00","Stops": 12},
+                   {"price": 3000,"Airline":"KoreanAir","Takeoff":"BKK 06.00","Landing":"CDG 19.00","Stops": 12}];
+
+        var myList = document.getElementById("Matrix1");
+
+        for (var i = 0; i < arr.length; i++) {
+          var tb = document.createElement("tbody");
+          var tr = document.createElement("tr");
+
+          var p = document.createElement("td");
+          var p1 = document.createTextNode(arr[i].price);
+          p.appendChild(p1);
+          tr.appendChild(p);
+          p.style.color = "white";
+          p.style.fontSize = "26px";
+
+          var a = document.createElement("td");
+          var a1 = document.createTextNode(arr[i].Airline);
+          a.appendChild(a1);
+          tr.appendChild(a);
+
+          var t = document.createElement("td");
+          var t1 = document.createTextNode(arr[i].Takeoff);
+          t.appendChild(t1);
+          tr.appendChild(t);
+
+          var l = document.createElement("td");
+          var l1 = document.createTextNode(arr[i].Landing);
+          l.appendChild(l1);
+          tr.appendChild(l);
+
+          var s = document.createElement("td");
+          var s1 = document.createTextNode(arr[i].Stops);
+          s.appendChild(s1);
+          tr.appendChild(s);
+
+          tb.appendChild(tr);
+          myList.appendChild(tb);
+  			}
+
+    </script>
+
+
+    <div id="List" class="tab-pane fade">
+      <h3>Welcome to my Airport!!</h3>
+    </div>
+
+    <div class="row">
+      <div class = "col-sm-5"></div>
+      <div class = "col-sm-2">
+        <ul class="pagination" id="page">
+          <li class="page-item disabled"><a href="#"><</a></li>
+          <li><a href="#">1</a></li>
+          <li class="page-item disabled"><a href="#">></a></li>
+        </ul>
+      </div>
+      <div class = "col-sm-5"></div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
